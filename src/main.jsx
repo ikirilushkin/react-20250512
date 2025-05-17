@@ -7,22 +7,22 @@ const root = createRoot(rootElem);
 
 root.render(
   <ul>
-    {restaurants.map((restaurant) => (
-      <li key={restaurant}>
-        <h2>{restaurant.name}</h2>
+    {restaurants.map(({ id, name, menu, reviews }) => (
+      <li key={id}>
+        <h2>{name}</h2>
         <div>
           <h3>Menu</h3>
           <ul>
-            {restaurant.menu.map((dish) => (
-              <li key={dish}>{dish.name}</li>
+            {menu.map(({ id, name }) => (
+              <li key={id}>{name}</li>
             ))}
           </ul>
         </div>
         <div>
           <h3>Reviews</h3>
           <ul>
-            {restaurant.reviews.map((review) => (
-              <li key={review}>{review.text}</li>
+            {reviews.map(({ id, text }) => (
+              <li key={id}>{text}</li>
             ))}
           </ul>
         </div>
