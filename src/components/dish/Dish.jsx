@@ -1,22 +1,23 @@
 import { useCount } from "./use-count";
 
+const DISH_MAX_COUNT = 5;
+const DISH_MIN_COUNT = 0;
+
 export const Dish = ({ dish, initialCount = 0 }) => {
-  const { count, onIncrement, onDecrement } = useCount(initialCount, 0, 5);
-  const handleAdd = () => {
-    onIncrement();
-  };
-  const handleRemove = () => {
-    onDecrement();
-  };
+  const { count, onIncrement, onDecrement } = useCount(
+    initialCount,
+    DISH_MIN_COUNT,
+    DISH_MAX_COUNT
+  );
   return (
     <div style={{ border: "1px solid", padding: "5px" }}>
       {dish.name} <i>{dish.price}$</i>
       <div>
-        <button onClick={handleAdd} hidden={count === 5}>
+        <button onClick={onIncrement} disabled={count === DISH_MAX_COUNT}>
           Add
         </button>
         <span>{count}</span>
-        <button onClick={handleRemove} hidden={count === 0}>
+        <button onClick={onDecrement} disabled={count === DISH_MIN_COUNT}>
           Remove
         </button>
       </div>

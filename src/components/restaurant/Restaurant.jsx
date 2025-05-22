@@ -8,13 +8,13 @@ export const Restaurant = ({ restaurant }) => {
       <div>
         <h3>Menu</h3>
         {restaurant.menu.map((dish) => (
-          <Dish key={dish.id} dish={dish}></Dish>
+          <Dish key={dish.id} dish={dish} />
         ))}
       </div>
       <div>
         <h3>Reviews</h3>
         {restaurant.reviews.map((review) => (
-          <Review key={review.id} review={review}></Review>
+          <Review key={review.id} review={review} />
         ))}
       </div>
     </div>

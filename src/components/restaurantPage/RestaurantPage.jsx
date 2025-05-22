@@ -5,17 +5,15 @@ import { useState } from "react";
 
 export const RestaurantPage = () => {
   const [activeRestaurant, setActiveRestaurant] = useState(restaurants[0]);
-  const handleTabChanged = (restaurant) => {
-    setActiveRestaurant(restaurant);
-  };
   return (
     <div>
       <Tabs
         tabs={restaurants}
-        onActiveTabChanged={handleTabChanged}
+        activeTab={activeRestaurant}
+        onActiveTabChanged={setActiveRestaurant}
         getLabel={(restaurant) => restaurant.name}
-      ></Tabs>
-      <Restaurant restaurant={activeRestaurant}></Restaurant>
+      />
+      <Restaurant restaurant={activeRestaurant} />
     </div>
   );
 };
