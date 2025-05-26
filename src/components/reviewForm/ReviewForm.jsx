@@ -46,7 +46,7 @@ export const ReviewForm = ({ onSubmit }) => {
         />
       </div>
       <div style={{ marginTop: "15px" }}>
-        <button onClick={() => handleSubmit()}>Send</button>
+        <button onClick={handleSubmit}>Send</button>
         <button onClick={clear}>Clear</button>
       </div>
     </form>
