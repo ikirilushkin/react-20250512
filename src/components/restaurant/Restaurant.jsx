@@ -1,5 +1,6 @@
 import { Dish } from "../dish/Dish";
-import { Review } from "../review/Review";
+import { Reviews } from "../review/Reviews";
+import { ReviewForm } from "../reviewForm/ReviewForm";
 
 export const Restaurant = ({ restaurant }) => {
   return (
@@ -13,9 +14,19 @@ export const Restaurant = ({ restaurant }) => {
       </div>
       <div>
         <h3>Reviews</h3>
-        {restaurant.reviews.map((review) => (
-          <Review key={review.id} review={review} />
-        ))}
+        {restaurant.reviews.length ? (
+          <Reviews reviews={restaurant.reviews} />
+        ) : (
+          "No reviews yet"
+        )}
+        <h4>Add new review</h4>
+        <ReviewForm
+          onSubmit={({ name, text, rating }) =>
+            console.log(
+              `New review is added by ${name} with text: ${text} and rating: ${rating}`
+            )
+          }
+        />
       </div>
     </div>
   );
