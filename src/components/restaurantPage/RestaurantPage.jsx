@@ -6,7 +6,7 @@ import { useState } from "react";
 export const RestaurantPage = () => {
   const [activeRestaurant, setActiveRestaurant] = useState(restaurants[0]);
   return (
-    <div>
+    <>
       <Tabs
         tabs={restaurants}
         activeTab={activeRestaurant}
@@ -14,6 +14,6 @@ export const RestaurantPage = () => {
         getLabel={(restaurant) => restaurant.name}
       />
       <Restaurant restaurant={activeRestaurant} />
-    </div>
+    </>
   );
 };

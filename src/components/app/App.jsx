@@ -1,12 +1,11 @@
 import { Layout } from "../layout/Layout";
 import { RestaurantPage } from "../restaurantPage/RestaurantPage";
+import "./global.css";
 
 export const App = () => {
   return (
     <Layout>
-      <div style={{ padding: 15 + "px" }}>
-        <RestaurantPage />
-      </div>
+      <RestaurantPage />
     </Layout>
   );
 };

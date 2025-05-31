@@ -1,4 +1,5 @@
-import { TabItem } from "./TabItem";
+import { Button } from "../button/button";
+import styles from "./tabs.module.css";
 
 export const Tabs = ({
   tabs = [],
@@ -10,15 +11,17 @@ export const Tabs = ({
     return null;
   }
   return (
-    <div>
+    <>
       {tabs.map((tab, idx) => (
-        <TabItem
+        <Button
           key={tab.id}
-          label={getLabel(tab)}
+          onClick={() => onActiveTabChanged(tabs[idx])}
           isActive={tab === activeTab}
-          onTabClick={() => onActiveTabChanged(tabs[idx])}
-        />
+          className={styles.tab}
+        >
+          <span>{getLabel(tab)}</span>
+        </Button>
       ))}
-    </div>
+    </>
   );
 };

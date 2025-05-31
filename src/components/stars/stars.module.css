@@ -1,0 +1,8 @@
+.star {
+  width: 20px;
+  fill: #e5e5e5;
+}
+
+.active {
+  fill: #f3bd63;
+}

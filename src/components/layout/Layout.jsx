@@ -1,13 +1,17 @@
+import { ProgressBar } from "../progressBar/ProgressBar";
+import styles from "./layout.module.css";
+
 export const Layout = ({ children }) => {
   return (
-    <div>
-      <header style={{ background: "#81D4DF", padding: 10 + "px" }}>
+    <>
+      <ProgressBar />
+      <header className={styles.header}>
         <h3>Restaurants</h3>
       </header>
-      {children}
-      <footer style={{ background: "#81D4DF", padding: 10 + "px" }}>
+      <div className={styles.container}>{children}</div>
+      <footer className={styles.footer}>
         <span>React course</span>
       </footer>
-    </div>
+    </>
   );
 };
