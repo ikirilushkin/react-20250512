@@ -21,7 +21,7 @@ export const ProgressBar = () => {
         style={{
           width: progressWidth + "%",
         }}
-      ></div>
+      />
     </div>
   );
 };
