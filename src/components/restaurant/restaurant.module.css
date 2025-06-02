@@ -1,0 +1,24 @@
+.title {
+  padding: 10px 0;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.sectionTitle {
+  margin-bottom: 15px;
+}
+
+.description {
+  padding: 10px 0;
+}
+
+.block {
+  border: 1px solid #e5e5e5;
+  padding: 10px 15px;
+}
+
+.dish {
+  margin-bottom: 15px;
+}

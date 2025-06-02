@@ -1,5 +1,7 @@
 import { Counter } from "../counter/Counter";
 import { useReviewForm } from "./use-review-form";
+import styles from "./form.module.css";
+import { Button } from "../button/button";
 
 const MAX_COUNT = 5;
 const MIN_COUNT = 0;
@@ -17,22 +19,24 @@ export const ReviewForm = ({ onSubmit }) => {
 
   return (
     <form onSubmit={(event) => event.preventDefault()}>
-      <div>
-        <span>Name</span>
+      <div className={styles.formElement}>
+        <label>Name</label>
         <input
+          className={styles.input}
           value={name}
           onChange={(event) => onNameChanged(event.target.value)}
         ></input>
       </div>
-      <div>
-        <span>Text</span>
+      <div className={styles.formElement}>
+        <label>Text</label>
         <input
+          className={styles.input}
           value={text}
           onChange={(event) => onTextChanged(event.target.value)}
         ></input>
       </div>
-      <div>
-        <span>Rating</span>
+      <div className={styles.formElement}>
+        <label>Rating</label>
         <Counter
           count={rating}
           min={MIN_COUNT}
@@ -46,8 +50,12 @@ export const ReviewForm = ({ onSubmit }) => {
         />
       </div>
       <div style={{ marginTop: "15px" }}>
-        <button onClick={handleSubmit}>Send</button>
-        <button onClick={clear}>Clear</button>
+        <Button className={styles.button} onClick={handleSubmit}>
+          Send
+        </Button>
+        <Button className={styles.button} onClick={clear}>
+          Clear
+        </Button>
       </div>
     </form>
   );

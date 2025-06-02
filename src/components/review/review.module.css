@@ -1,0 +1,17 @@
+.review {
+  border: 1px solid #e5e5e5;
+  padding: 10px 15px;
+  display: flex;
+}
+
+.content {
+  flex-grow: 1;
+}
+
+.name {
+  font-weight: 600;
+}
+
+.body {
+  font-style: italic;
+}

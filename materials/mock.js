@@ -2,6 +2,25 @@ export const restaurants = [
   {
     id: "a757a0e9-03c1-4a2a-b384-8ac21dbe2fb2",
     name: "Dishoom",
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae justo laoreet velit congue molestie non ut dolor. 
+      Sed sollicitudin sodales metus in facilisis. Aliquam fermentum orci accumsan venenatis hendrerit. Nunc pretium a metus quis pellentesque. 
+      Vivamus pharetra erat sit amet accumsan tincidunt. Nullam quis luctus felis, vitae blandit dolor. Nullam ac consequat nunc. 
+      Aliquam erat volutpat. Cras enim felis, venenatis ut ligula vel, efficitur pretium libero. Sed a pretium quam. 
+      Proin nibh nulla, accumsan sed turpis quis, efficitur molestie dolor. Mauris rutrum nibh a tortor laoreet, id malesuada enim hendrerit. 
+      Nullam eleifend feugiat ante, id dignissim magna vehicula id. Integer mollis sem enim, nec dapibus lorem egestas ut. 
+      Vivamus ut mi pharetra tortor consequat tincidunt. In et vulputate ex. Quisque efficitur lorem nec augue dignissim porta. 
+      Integer nibh orci, venenatis nec sollicitudin ut, eleifend sed est. Curabitur eleifend posuere varius. Nulla mauris sem, malesuada sed lorem sollicitudin, 
+      congue dapibus felis. Pellentesque dapibus lacus sed arcu lobortis consequat. Proin blandit vulputate lectus, nec congue tortor tincidunt id. 
+      Phasellus commodo turpis vitae ante imperdiet, a semper lectus varius. Sed convallis dolor eu sapien sollicitudin, euismod suscipit velit mollis. 
+      Donec posuere sagittis lectus id gravida. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed nec nibh ante. 
+      Nullam eget iaculis augue, a accumsan enim. Vivamus vel felis et erat tristique iaculis. Maecenas libero felis, sodales a gravida a, condimentum vitae justo. 
+      Duis nec enim condimentum ipsum tincidunt sodales ac non orci. Aenean nec sodales sem. Integer id tincidunt massa, sit amet dictum tellus. 
+      Nam lacinia vestibulum erat ac dictum. Duis vestibulum vel felis sit amet sagittis. Suspendisse pretium arcu ac dui convallis placerat. 
+      In faucibus fringilla mauris, vel laoreet orci tristique quis. Morbi vitae aliquet felis, nec tincidunt lectus. Aenean nec sapien vitae neque venenatis blandit. 
+      In et ligula nec erat gravida iaculis vel sed metus. Nam auctor odio et dui malesuada placerat. Vestibulum cursus libero eu lacus maximus, ac vestibulum quam 
+      pretium. Ut ut nisi pellentesque, efficitur tortor at, luctus nisi. Etiam id nisl facilisis, vulputate purus nec, sollicitudin mi. Proin porttitor risus urna. 
+      Nunc cursus non enim eget porttitor. Proin ornare finibus magna id aliquet. In placerat placerat augue vel pretium. Nulla aliquet nunc iaculis orci bibendum, 
+      non lobortis nulla ultrices. Phasellus feugiat turpis ac ante tincidunt, nec tincidunt neque bibendum.`,
     menu: [
       {
         id: "d75f762a-eadd-49be-8918-ed0daa8dd024",
@@ -40,6 +59,25 @@ export const restaurants = [
   {
     id: "bb8afbec-2fec-491f-93e9-7f13950dd80b",
     name: "Homeslice",
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae justo laoreet velit congue molestie non ut dolor. 
+      Sed sollicitudin sodales metus in facilisis. Aliquam fermentum orci accumsan venenatis hendrerit. Nunc pretium a metus quis pellentesque. 
+      Vivamus pharetra erat sit amet accumsan tincidunt. Nullam quis luctus felis, vitae blandit dolor. Nullam ac consequat nunc. 
+      Aliquam erat volutpat. Cras enim felis, venenatis ut ligula vel, efficitur pretium libero. Sed a pretium quam. 
+      Proin nibh nulla, accumsan sed turpis quis, efficitur molestie dolor. Mauris rutrum nibh a tortor laoreet, id malesuada enim hendrerit. 
+      Nullam eleifend feugiat ante, id dignissim magna vehicula id. Integer mollis sem enim, nec dapibus lorem egestas ut. 
+      Vivamus ut mi pharetra tortor consequat tincidunt. In et vulputate ex. Quisque efficitur lorem nec augue dignissim porta. 
+      Integer nibh orci, venenatis nec sollicitudin ut, eleifend sed est. Curabitur eleifend posuere varius. Nulla mauris sem, malesuada sed lorem sollicitudin, 
+      congue dapibus felis. Pellentesque dapibus lacus sed arcu lobortis consequat. Proin blandit vulputate lectus, nec congue tortor tincidunt id. 
+      Phasellus commodo turpis vitae ante imperdiet, a semper lectus varius. Sed convallis dolor eu sapien sollicitudin, euismod suscipit velit mollis. 
+      Donec posuere sagittis lectus id gravida. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed nec nibh ante. 
+      Nullam eget iaculis augue, a accumsan enim. Vivamus vel felis et erat tristique iaculis. Maecenas libero felis, sodales a gravida a, condimentum vitae justo. 
+      Duis nec enim condimentum ipsum tincidunt sodales ac non orci. Aenean nec sodales sem. Integer id tincidunt massa, sit amet dictum tellus. 
+      Nam lacinia vestibulum erat ac dictum. Duis vestibulum vel felis sit amet sagittis. Suspendisse pretium arcu ac dui convallis placerat. 
+      In faucibus fringilla mauris, vel laoreet orci tristique quis. Morbi vitae aliquet felis, nec tincidunt lectus. Aenean nec sapien vitae neque venenatis blandit. 
+      In et ligula nec erat gravida iaculis vel sed metus. Nam auctor odio et dui malesuada placerat. Vestibulum cursus libero eu lacus maximus, ac vestibulum quam 
+      pretium. Ut ut nisi pellentesque, efficitur tortor at, luctus nisi. Etiam id nisl facilisis, vulputate purus nec, sollicitudin mi. Proin porttitor risus urna. 
+      Nunc cursus non enim eget porttitor. Proin ornare finibus magna id aliquet. In placerat placerat augue vel pretium. Nulla aliquet nunc iaculis orci bibendum, 
+      non lobortis nulla ultrices. Phasellus feugiat turpis ac ante tincidunt, nec tincidunt neque bibendum.`,
     menu: [
       {
         id: "25402233-0095-49ea-9939-1e67ed89ffb9",
@@ -78,6 +116,25 @@ export const restaurants = [
   {
     id: "982bfbce-c5e0-41a0-9f99-d5c20ecee49d",
     name: "Fabrique",
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae justo laoreet velit congue molestie non ut dolor. 
+      Sed sollicitudin sodales metus in facilisis. Aliquam fermentum orci accumsan venenatis hendrerit. Nunc pretium a metus quis pellentesque. 
+      Vivamus pharetra erat sit amet accumsan tincidunt. Nullam quis luctus felis, vitae blandit dolor. Nullam ac consequat nunc. 
+      Aliquam erat volutpat. Cras enim felis, venenatis ut ligula vel, efficitur pretium libero. Sed a pretium quam. 
+      Proin nibh nulla, accumsan sed turpis quis, efficitur molestie dolor. Mauris rutrum nibh a tortor laoreet, id malesuada enim hendrerit. 
+      Nullam eleifend feugiat ante, id dignissim magna vehicula id. Integer mollis sem enim, nec dapibus lorem egestas ut. 
+      Vivamus ut mi pharetra tortor consequat tincidunt. In et vulputate ex. Quisque efficitur lorem nec augue dignissim porta. 
+      Integer nibh orci, venenatis nec sollicitudin ut, eleifend sed est. Curabitur eleifend posuere varius. Nulla mauris sem, malesuada sed lorem sollicitudin, 
+      congue dapibus felis. Pellentesque dapibus lacus sed arcu lobortis consequat. Proin blandit vulputate lectus, nec congue tortor tincidunt id. 
+      Phasellus commodo turpis vitae ante imperdiet, a semper lectus varius. Sed convallis dolor eu sapien sollicitudin, euismod suscipit velit mollis. 
+      Donec posuere sagittis lectus id gravida. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed nec nibh ante. 
+      Nullam eget iaculis augue, a accumsan enim. Vivamus vel felis et erat tristique iaculis. Maecenas libero felis, sodales a gravida a, condimentum vitae justo. 
+      Duis nec enim condimentum ipsum tincidunt sodales ac non orci. Aenean nec sodales sem. Integer id tincidunt massa, sit amet dictum tellus. 
+      Nam lacinia vestibulum erat ac dictum. Duis vestibulum vel felis sit amet sagittis. Suspendisse pretium arcu ac dui convallis placerat. 
+      In faucibus fringilla mauris, vel laoreet orci tristique quis. Morbi vitae aliquet felis, nec tincidunt lectus. Aenean nec sapien vitae neque venenatis blandit. 
+      In et ligula nec erat gravida iaculis vel sed metus. Nam auctor odio et dui malesuada placerat. Vestibulum cursus libero eu lacus maximus, ac vestibulum quam 
+      pretium. Ut ut nisi pellentesque, efficitur tortor at, luctus nisi. Etiam id nisl facilisis, vulputate purus nec, sollicitudin mi. Proin porttitor risus urna. 
+      Nunc cursus non enim eget porttitor. Proin ornare finibus magna id aliquet. In placerat placerat augue vel pretium. Nulla aliquet nunc iaculis orci bibendum, 
+      non lobortis nulla ultrices. Phasellus feugiat turpis ac ante tincidunt, nec tincidunt neque bibendum.`,
     menu: [
       {
         id: "08c9ffa0-d003-4310-9e15-20978743296e",
@@ -110,6 +167,25 @@ export const restaurants = [
   {
     id: "d9241927-09e1-44f3-8986-a76346869037",
     name: "Flat Iron",
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae justo laoreet velit congue molestie non ut dolor. 
+      Sed sollicitudin sodales metus in facilisis. Aliquam fermentum orci accumsan venenatis hendrerit. Nunc pretium a metus quis pellentesque. 
+      Vivamus pharetra erat sit amet accumsan tincidunt. Nullam quis luctus felis, vitae blandit dolor. Nullam ac consequat nunc. 
+      Aliquam erat volutpat. Cras enim felis, venenatis ut ligula vel, efficitur pretium libero. Sed a pretium quam. 
+      Proin nibh nulla, accumsan sed turpis quis, efficitur molestie dolor. Mauris rutrum nibh a tortor laoreet, id malesuada enim hendrerit. 
+      Nullam eleifend feugiat ante, id dignissim magna vehicula id. Integer mollis sem enim, nec dapibus lorem egestas ut. 
+      Vivamus ut mi pharetra tortor consequat tincidunt. In et vulputate ex. Quisque efficitur lorem nec augue dignissim porta. 
+      Integer nibh orci, venenatis nec sollicitudin ut, eleifend sed est. Curabitur eleifend posuere varius. Nulla mauris sem, malesuada sed lorem sollicitudin, 
+      congue dapibus felis. Pellentesque dapibus lacus sed arcu lobortis consequat. Proin blandit vulputate lectus, nec congue tortor tincidunt id. 
+      Phasellus commodo turpis vitae ante imperdiet, a semper lectus varius. Sed convallis dolor eu sapien sollicitudin, euismod suscipit velit mollis. 
+      Donec posuere sagittis lectus id gravida. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed nec nibh ante. 
+      Nullam eget iaculis augue, a accumsan enim. Vivamus vel felis et erat tristique iaculis. Maecenas libero felis, sodales a gravida a, condimentum vitae justo. 
+      Duis nec enim condimentum ipsum tincidunt sodales ac non orci. Aenean nec sodales sem. Integer id tincidunt massa, sit amet dictum tellus. 
+      Nam lacinia vestibulum erat ac dictum. Duis vestibulum vel felis sit amet sagittis. Suspendisse pretium arcu ac dui convallis placerat. 
+      In faucibus fringilla mauris, vel laoreet orci tristique quis. Morbi vitae aliquet felis, nec tincidunt lectus. Aenean nec sapien vitae neque venenatis blandit. 
+      In et ligula nec erat gravida iaculis vel sed metus. Nam auctor odio et dui malesuada placerat. Vestibulum cursus libero eu lacus maximus, ac vestibulum quam 
+      pretium. Ut ut nisi pellentesque, efficitur tortor at, luctus nisi. Etiam id nisl facilisis, vulputate purus nec, sollicitudin mi. Proin porttitor risus urna. 
+      Nunc cursus non enim eget porttitor. Proin ornare finibus magna id aliquet. In placerat placerat augue vel pretium. Nulla aliquet nunc iaculis orci bibendum, 
+      non lobortis nulla ultrices. Phasellus feugiat turpis ac ante tincidunt, nec tincidunt neque bibendum.`,
     menu: [
       {
         id: "6c02c2ce-b868-4191-b4a7-8686429f4bac",

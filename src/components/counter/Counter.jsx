@@ -1,13 +1,24 @@
+import { Button } from "../button/button";
+import styles from "./counter.module.css";
+
 export const Counter = ({ count, min, max, onIncrement, onDecrement }) => {
   return (
     <div>
-      <button onClick={onIncrement} disabled={count === max}>
-        Add
-      </button>
-      <span>{count}</span>
-      <button onClick={onDecrement} disabled={count === min}>
-        Remove
-      </button>
+      <Button
+        className={styles.button}
+        onClick={onIncrement}
+        disabled={count === max}
+      >
+        +
+      </Button>
+      <span className={styles.value}>{count}</span>
+      <Button
+        className={styles.button}
+        onClick={onDecrement}
+        disabled={count === min}
+      >
+        -
+      </Button>
     </div>
   );
 };
