@@ -1,9 +1,12 @@
+import { useContext } from "react";
 import { Dish } from "../dish/Dish";
 import { Reviews } from "../review/Reviews";
 import { ReviewForm } from "../reviewForm/ReviewForm";
+import { AuthContext } from "../auth-context";
 import styles from "./restaurant.module.css";
 
 export const Restaurant = ({ restaurant }) => {
+  const { authUser } = useContext(AuthContext);
   return (
     <div>
       <h2 className={styles.title}>{restaurant.name}</h2>
@@ -21,16 +24,20 @@ export const Restaurant = ({ restaurant }) => {
         ) : (
           "No reviews yet"
         )}
-        <div className={styles.block}>
-          <h4>Leave your review</h4>
-          <ReviewForm
-            onSubmit={({ name, text, rating }) =>
-              console.log(
-                `New review is added by ${name} with text: ${text} and rating: ${rating}`
-              )
-            }
-          />
-        </div>
+        {authUser !== null ? (
+          <div className={styles.block}>
+            <h4>Leave your review</h4>
+            <ReviewForm
+              onSubmit={({ name, text, rating }) =>
+                console.log(
+                  `New review is added by ${name} with text: ${text} and rating: ${rating}`
+                )
+              }
+            />
+          </div>
+        ) : (
+          ""
+        )}
       </div>
     </div>
   );

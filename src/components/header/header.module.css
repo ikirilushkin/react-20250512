@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  background-color: #81d4df;
+  padding: 20px 10px;
+}
+
+.light {
+  background-color: #81d4df;
+}
+
+.dark {
+  background-color: #1c4d53;
+  color: #fff;
+}
+
+.title {
+  flex-grow: 1;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.themeButton {
+  margin-left: 10px;
+}

@@ -1,11 +1,25 @@
 .base {
-  background-color: #fff;
   border: 1px solid;
   border-radius: 3px;
   padding: 10px 15px;
   cursor: pointer;
 }
 
+.base:hover {
+  opacity: 0.9;
+}
+
 .active {
   font-weight: 600;
+}
+
+.light {
+  background-color: #5ab1b6;
+  border-color: #448e92;
+}
+
+.dark {
+  background-color: #195053;
+  color: #fff;
+  border-color: #0e3537;
 }
