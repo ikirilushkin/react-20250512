@@ -19,11 +19,6 @@
   flex-grow: 1;
 }
 
-.profile {
-  display: flex;
-  align-items: center;
-}
-
 .themeButton {
   margin-left: 10px;
 }

@@ -31,9 +31,7 @@ export const Dish = ({ dish, initialCount = 0, className }) => {
             onDecrement={onDecrement}
           />
         </div>
-      ) : (
-        ""
-      )}
+      ) : null}
     </div>
   );
 };

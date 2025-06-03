@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Dish } from "../dish/Dish";
 import { Reviews } from "../review/Reviews";
-import { ReviewForm } from "../reviewForm/ReviewForm";
+import { ReviewForm } from "../review-form/review-form";
 import { AuthContext } from "../auth-context";
 import styles from "./restaurant.module.css";
 
@@ -35,9 +35,7 @@ export const Restaurant = ({ restaurant }) => {
               }
             />
           </div>
-        ) : (
-          ""
-        )}
+        ) : null}
       </div>
     </div>
   );
