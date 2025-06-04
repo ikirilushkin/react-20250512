@@ -21,17 +21,15 @@ export const Dish = ({ dish, initialCount = 0, className }) => {
         <p className={styles.name}>{dish.name}</p>
         <p className={styles.price}>{dish.price} $</p>
       </div>
-      {authUser !== null ? (
-        <div>
-          <Counter
-            count={count}
-            min={DISH_MIN_COUNT}
-            max={DISH_MAX_COUNT}
-            onIncrement={onIncrement}
-            onDecrement={onDecrement}
-          />
-        </div>
-      ) : null}
+      {authUser.isAuthorized && (
+        <Counter
+          count={count}
+          min={DISH_MIN_COUNT}
+          max={DISH_MAX_COUNT}
+          onIncrement={onIncrement}
+          onDecrement={onDecrement}
+        />
+      )}
     </div>
   );
 };

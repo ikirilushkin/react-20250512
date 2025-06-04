@@ -8,7 +8,11 @@ export const HeaderUser = () => {
   const { authUser, login } = useContext(AuthContext);
   return (
     <div className={styles.profile}>
-      {authUser === null ? <Button onClick={login}>Login</Button> : <Profile />}
+      {!authUser.isAuthorized ? (
+        <Button onClick={login}>Login</Button>
+      ) : (
+        <Profile />
+      )}
     </div>
   );
 };
