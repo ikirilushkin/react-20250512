@@ -4,6 +4,7 @@ import { ThemeContext } from "../theme-context";
 import classNames from "classnames/bind";
 import styles from "./header.module.css";
 import { HeaderUser } from "../header-user/header-user";
+import { NavLink } from "react-router";
 
 export const Header = () => {
   const { theme } = useContext(ThemeContext);
@@ -14,7 +15,14 @@ export const Header = () => {
         [styles.dark]: theme === "dark",
       })}
     >
-      <h3 className={styles.title}>Restaurants</h3>
+      <div className={styles.menu}>
+        <NavLink className={styles.menuItem} to="/">
+          Home
+        </NavLink>
+        <NavLink className={styles.menuItem} to="/restaurants">
+          Restaurants
+        </NavLink>
+      </div>
       <HeaderUser />
       <div className={styles.themeButton}>
         <ThemeButton />
