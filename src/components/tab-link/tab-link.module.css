@@ -9,18 +9,18 @@
   opacity: 0.9;
 }
 
-.navLink.active {
+.active {
   pointer-events: none;
   opacity: 0.8;
 }
 
-.navLink.light {
+.light {
   background-color: #5ab1b6;
   border-color: #448e92;
   color: #000;
 }
 
-.navLink.dark {
+.dark {
   background-color: #195053;
   color: #fff;
   border-color: #0e3537;

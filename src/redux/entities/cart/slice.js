@@ -18,7 +18,6 @@ export const cartSlice = createSlice({
       }
     },
     clearCart: (state) => {
-      console.log("clear cart");
       Object.keys(state).forEach((key) => {
         delete state[key];
       });
