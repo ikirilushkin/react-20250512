@@ -15,8 +15,12 @@
   color: #fff;
 }
 
-.title {
+.menu {
   flex-grow: 1;
+}
+
+.menuItem {
+  margin-right: 10px;
 }
 
 .themeButton {

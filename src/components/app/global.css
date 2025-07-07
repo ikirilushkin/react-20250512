@@ -11,3 +11,7 @@
 body {
   font-family: "Roboto Mono", serif;
 }
+
+a {
+  text-decoration: none;
+}

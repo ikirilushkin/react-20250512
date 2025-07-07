@@ -1,0 +1,27 @@
+.navLink {
+  border: 1px solid;
+  border-radius: 3px;
+  padding: 10px 15px;
+  display: inline-block;
+}
+
+.navLink:hover {
+  opacity: 0.9;
+}
+
+.active {
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.light {
+  background-color: #5ab1b6;
+  border-color: #448e92;
+  color: #000;
+}
+
+.dark {
+  background-color: #195053;
+  color: #fff;
+  border-color: #0e3537;
+}
