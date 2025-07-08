@@ -7,6 +7,9 @@ import { Dish } from "./dish";
 export const DishContainer = ({ id, className }) => {
   const dish = useSelector((state) => selectDishById(state, id));
   const { authUser } = useContext(AuthContext);
+  if (!dish) {
+    return null;
+  }
   return (
     <Dish
       id={dish.id}

@@ -1,6 +1,4 @@
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { getRestaurantById } from "../../redux/entities/restaurants/get-restaurant-by-id";
+import { useSelector } from "react-redux";
 import {
   selectRequestStatus,
   selectRestaurantById,
@@ -11,10 +9,6 @@ import { RequestStatus } from "../../types/request-status";
 import { RequestError } from "../request-error/request-error";
 
 export const RestaurantContainer = ({ id }) => {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getRestaurantById(id));
-  }, [dispatch, id]);
   const restaurant = useSelector((state) => selectRestaurantById(state, id));
   const requestStatus = useSelector(selectRequestStatus);
 

@@ -25,7 +25,7 @@ export const RestaurantsPage = () => {
   return (
     <>
       {restaurantIds.map((id) => (
-        <TabLink to={`/restaurants/${id}/menu`} key={id}>
+        <TabLink to={`/restaurants/${id}`} key={id}>
           <RestaurantTab id={id} />
         </TabLink>
       ))}
