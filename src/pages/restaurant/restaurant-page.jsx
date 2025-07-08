@@ -1,5 +1,5 @@
 import { Outlet, useParams } from "react-router";
-import { Restaurant } from "../../components/restaurant/restaurant";
+import { RestaurantContainer } from "../../components/restaurant/restaurant-container";
 
 export const RestaurantPage = () => {
   const { restaurantId } = useParams();
@@ -10,7 +10,7 @@ export const RestaurantPage = () => {
 
   return (
     <>
-      <Restaurant id={restaurantId} />
+      <RestaurantContainer id={restaurantId} />
       <Outlet />
     </>
   );

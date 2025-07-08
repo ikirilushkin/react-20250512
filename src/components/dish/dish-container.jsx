@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { selectDishById } from "../../redux/entities/dish/slice";
+import { selectDishById } from "../../redux/entities/dishes/slice";
 import { useContext } from "react";
 import { AuthContext } from "../auth-context";
 import { Dish } from "./dish";
