@@ -1,24 +1,32 @@
-import { useSelector } from "react-redux";
-import { selectRestaurantById } from "../../../redux/entities/restaurant/slice";
+import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router";
-import { DishContainer } from "../../../components/dish/dish-container";
-import styles from "./menu.module.css";
+import { useEffect } from "react";
+import { getDishesByRestaurant } from "../../../redux/entities/dishes/get-dishes-by-restaurant";
+import { selectRequestStatus } from "../../../redux/entities/dishes/slice";
+import { Loader } from "../../../components/loader/loader";
+import { RequestStatus } from "../../../types/request-status";
+import { RequestError } from "../../../components/request-error/request-error";
+import { selectRestaurantById } from "../../../redux/entities/restaurants/slice";
+import { Dishes } from "../../../components/dishes/dishes";
 
 export const MenuPage = () => {
   const { restaurantId } = useParams();
-  const restaurant = useSelector((state) =>
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getDishesByRestaurant(restaurantId));
+  }, [dispatch, restaurantId]);
+  const { menu } = useSelector((state) =>
     selectRestaurantById(state, restaurantId)
   );
-
+  const requestStatus = useSelector(selectRequestStatus);
   if (!restaurantId) {
     return null;
   }
-  const { menu } = restaurant;
-  return (
-    <>
-      {menu.map((dishId) => (
-        <DishContainer key={dishId} id={dishId} className={styles.dish} />
-      ))}
-    </>
-  );
+  if (RequestStatus.isLoading(requestStatus)) {
+    return <Loader />;
+  }
+  if (requestStatus === RequestStatus.REJECTED) {
+    return <RequestError />;
+  }
+  return <Dishes dishes={menu} />;
 };

@@ -1,11 +1,7 @@
 import styles from "./restaurant.module.css";
-import { useSelector } from "react-redux";
-import { selectRestaurantById } from "../../redux/entities/restaurant/slice";
 import { TabLink } from "../tab-link/tab-link";
 
-export const Restaurant = ({ id }) => {
-  const restaurant = useSelector((state) => selectRestaurantById(state, id));
-  const { name, description } = restaurant;
+export const Restaurant = ({ name, description }) => {
   return (
     <div>
       <h2 className={styles.title}>{name}</h2>
