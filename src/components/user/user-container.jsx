@@ -1,9 +1,13 @@
-import { useSelector } from "react-redux";
-import { selectUserById } from "../../redux/entities/users/slice";
 import { User } from "./user";
+import { useGetUsersQuery } from "../../redux/api";
 
 export const UserContainer = ({ id }) => {
-  const user = useSelector((state) => selectUserById(state, id));
+  const { data: user } = useGetUsersQuery(undefined, {
+    selectFromResult: (result) => ({
+      ...result,
+      data: result.data.find((user) => user.id === id),
+    }),
+  });
   if (!user) {
     return null;
   }
