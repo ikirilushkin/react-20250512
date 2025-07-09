@@ -22,7 +22,7 @@ export const ReviewPage = () => {
   }, [restaurantId, dispatch]);
   useEffect(() => {
     dispatch(getUsers());
-  }, [restaurantId, dispatch]);
+  }, [dispatch]);
   const { reviews } = useSelector((state) =>
     selectRestaurantById(state, restaurantId)
   );
