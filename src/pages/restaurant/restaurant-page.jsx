@@ -6,14 +6,12 @@ import { getRestaurantById } from "../../redux/entities/restaurants/get-restaura
 import { RequestStatus } from "../../types/request-status";
 import { Loader } from "../../components/loader/loader";
 import { selectRestaurantRequestStatus } from "../../redux/entities/restaurants/slice";
-import { getReviewsByRestaurant } from "../../redux/entities/reviews/get-reviews-by-restaurant";
 
 export const RestaurantPage = () => {
   const { restaurantId } = useParams();
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getRestaurantById(restaurantId));
-    dispatch(getReviewsByRestaurant(restaurantId));
   }, [dispatch, restaurantId]);
   const requestStatus = useSelector(selectRestaurantRequestStatus);
 

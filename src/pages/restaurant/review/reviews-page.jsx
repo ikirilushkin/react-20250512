@@ -19,6 +19,8 @@ export const ReviewPage = () => {
   const { authUser } = useContext(AuthContext);
   useEffect(() => {
     dispatch(getReviewsByRestaurant(restaurantId));
+  }, [restaurantId, dispatch]);
+  useEffect(() => {
     dispatch(getUsers());
   }, [restaurantId, dispatch]);
   const { reviews } = useSelector((state) =>
