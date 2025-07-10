@@ -10,9 +10,7 @@ export const Cart = () => {
   return (
     <ul>
       {items.map(({ id, amount }) => (
-        <li key={id}>
-          <CartItem itemId={id} amount={amount} />
-        </li>
+        <CartItem key={id} itemId={id} amount={amount} />
       ))}
     </ul>
   );

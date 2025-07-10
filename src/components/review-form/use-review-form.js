@@ -3,21 +3,14 @@ import { useReducer } from "react";
 const MAX_COUNT = 5;
 const MIN_COUNT = 0;
 
-const SET_NAME = "set_name";
 const SET_TEXT = "set_text";
 const SET_RATING = "set_rating";
 const CLEAR = "clear_review";
 
-const initialState = { name: "", text: "", rating: 3 };
+const initialState = { text: "", rating: 3 };
 
 function reducer(state, { type, payload }) {
   switch (type) {
-    case SET_NAME: {
-      return {
-        ...state,
-        name: payload,
-      };
-    }
     case SET_TEXT: {
       return {
         ...state,
@@ -38,12 +31,11 @@ function reducer(state, { type, payload }) {
   }
 }
 
-export const useReviewForm = () => {
-  const [form, dispatch] = useReducer(reducer, initialState);
-
-  const onNameChanged = (name) => {
-    dispatch({ type: SET_NAME, payload: name });
-  };
+export const useReviewForm = (review) => {
+  const [form, dispatch] = useReducer(
+    reducer,
+    review ? { text: review.text, rating: review.rating } : initialState
+  );
 
   const onTextChanged = (text) => {
     dispatch({ type: SET_TEXT, payload: text });
@@ -62,7 +54,6 @@ export const useReviewForm = () => {
 
   return {
     form,
-    onNameChanged,
     onTextChanged,
     onRatingChanged,
     clear,

@@ -3,7 +3,13 @@ import styles from "./button.module.css";
 import { useContext } from "react";
 import { ThemeContext } from "../theme-context";
 
-export const Button = ({ children, onClick, isActive, className }) => {
+export const Button = ({
+  children,
+  onClick,
+  isActive,
+  className,
+  disabled = false,
+}) => {
   const { theme } = useContext(ThemeContext);
   return (
     <button
@@ -13,6 +19,7 @@ export const Button = ({ children, onClick, isActive, className }) => {
         [styles.dark]: theme === "dark",
       })}
       onClick={onClick}
+      disabled={disabled}
     >
       {children}
     </button>

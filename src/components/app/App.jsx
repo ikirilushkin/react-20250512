@@ -5,12 +5,12 @@ import { ThemeContextProvider } from "../theme-context/theme-context-provider";
 import "./global.css";
 import { store } from "../../redux/store";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router";
-import { HomePage } from "../../pages/home/home-page";
-import { RestaurantsPage } from "../../pages/restaurant/restaurants-page";
-import { RestaurantPage } from "../../pages/restaurant/restaurant-page";
-import { MenuPage } from "../../pages/restaurant/menu/menu-page";
-import { ReviewPage } from "../../pages/restaurant/review/reviews-page";
-import { DishPage } from "../../pages/dish/dish-page";
+import { HomePage } from "../../pages/home-page";
+import { RestaurantsPage } from "../../pages/restaurants-page";
+import { RestaurantPage } from "../../pages/restaurant-page";
+import { MenuPage } from "../../pages/restaurant-menu-page";
+import { ReviewsPage } from "../../pages/restaurant-reviews-page";
+import { DishPage } from "../../pages/dish-page";
 
 export const App = () => {
   return (
@@ -25,7 +25,7 @@ export const App = () => {
                   <Route path=":restaurantId" element={<RestaurantPage />}>
                     <Route index element={<Navigate to="menu" replace />} />
                     <Route path="menu" element={<MenuPage />} />
-                    <Route path="reviews" element={<ReviewPage />} />
+                    <Route path="reviews" element={<ReviewsPage />} />
                   </Route>
                 </Route>
                 <Route path="dish/:dishId" element={<DishPage />} />
