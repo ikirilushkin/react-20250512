@@ -10,7 +10,7 @@ import { useEditReviewMutation } from "../../redux/api";
 
 export const Review = ({ review, className }) => {
   const { authUser } = useContext(AuthContext);
-  let [showEditForm, setShowEditForm] = useState(false);
+  const [showEditForm, setShowEditForm] = useState(false);
   const [editReviewMutation, { isLoading }] = useEditReviewMutation();
   const handleEdit = (updatedReview) => {
     editReviewMutation({ review: updatedReview });
