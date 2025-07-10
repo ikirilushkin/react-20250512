@@ -1,4 +1,3 @@
-import { RestaurantTab } from "../components/restaurant-tab/restaurant-tab";
 import { Outlet } from "react-router";
 import { TabLink } from "../components/tab-link/tab-link";
 import { Loader } from "../components/loader/loader";
@@ -19,7 +18,7 @@ export const RestaurantsPage = () => {
     <>
       {data.map(({ id, name }) => (
         <TabLink to={`/restaurants/${id}`} key={id}>
-          <RestaurantTab title={name} />
+          {name}
         </TabLink>
       ))}
       <Outlet />
