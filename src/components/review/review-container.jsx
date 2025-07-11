@@ -1,4 +1,4 @@
-import { Review } from "./review";
+import { Review } from "./review.jsx";
 
 export const ReviewContainer = ({ review, className }) => {
   if (!review) {

@@ -1,3 +1,5 @@
+"use client";
+
 import classNames from "classnames/bind";
 import { useContext } from "react";
 import { ThemeContext } from "../theme-context";

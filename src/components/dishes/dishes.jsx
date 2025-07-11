@@ -2,6 +2,9 @@ import { DishContainer } from "../dish/dish-container";
 import styles from "./dishes.module.css";
 
 export const Dishes = ({ dishes }) => {
+  if (!dishes) {
+    return null;
+  }
   return (
     <div>
       {dishes.map((dish) => (

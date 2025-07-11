@@ -1,11 +1,14 @@
-import { Outlet } from "react-router";
+"use client";
+
 import { TabLink } from "../components/tab-link/tab-link";
 import { Loader } from "../components/loader/loader";
 import { useGetRestaurantsQuery } from "../redux/api";
 import { RequestError } from "../components/request-error/request-error";
+import { usePathname } from "next/navigation";
 
-export const RestaurantsPage = () => {
+export const RestaurantsPage = ({ children }) => {
   const { data, isLoading, isError } = useGetRestaurantsQuery();
+  const pathname = usePathname();
 
   if (isLoading) {
     return <Loader />;
@@ -13,15 +16,22 @@ export const RestaurantsPage = () => {
   if (isError) {
     return <RequestError />;
   }
+  if (!data?.length) {
+    return null;
+  }
 
   return (
     <>
       {data.map(({ id, name }) => (
-        <TabLink to={`/restaurants/${id}`} key={id}>
+        <TabLink
+          to={`/restaurants/${id}/menu`}
+          key={id}
+          isActive={pathname === `/restaurants/${id}/menu`}
+        >
           {name}
         </TabLink>
       ))}
-      <Outlet />
+      {children}
     </>
   );
 };
