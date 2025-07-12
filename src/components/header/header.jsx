@@ -1,10 +1,12 @@
+"use client";
+
 import { useContext } from "react";
 import { ThemeButton } from "../theme-button/theme-button";
 import { ThemeContext } from "../theme-context";
 import classNames from "classnames/bind";
 import styles from "./header.module.css";
 import { HeaderUser } from "../header-user/header-user";
-import { NavLink } from "react-router";
+import Link from "next/link";
 
 export const Header = () => {
   const { theme } = useContext(ThemeContext);
@@ -16,12 +18,12 @@ export const Header = () => {
       })}
     >
       <div className={styles.menu}>
-        <NavLink className={styles.menuItem} to="/">
+        <Link className={styles.menuItem} href={"/"}>
           Home
-        </NavLink>
-        <NavLink className={styles.menuItem} to="/restaurants">
+        </Link>
+        <Link className={styles.menuItem} href={"/restaurants"}>
           Restaurants
-        </NavLink>
+        </Link>
       </div>
       <HeaderUser />
       <div className={styles.themeButton}>
